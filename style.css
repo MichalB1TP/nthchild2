@@ -1,0 +1,223 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  color: #1a202c;
+  background: #f0f4f8;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background: #1a365d;
+  color: white;
+  padding: 24px 28px;
+  border-radius: 10px;
+  margin-bottom: 28px;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+
+header p {
+  opacity: 0.85;
+  font-size: 0.95rem;
+}
+
+header code {
+  background: rgba(255,255,255,0.15);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.sekcja {
+  background: white;
+  border-radius: 10px;
+  padding: 22px 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.sekcja h2 {
+  font-size: 1.2rem;
+  color: #2b6cb0;
+  margin-bottom: 6px;
+}
+
+.opis {
+  font-size: 0.9rem;
+  color: #4a5568;
+  margin-bottom: 16px;
+}
+
+.opis code {
+  background: #edf2f7;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 0.85rem;
+}
+
+/* ----- Karty ----- */
+.siatka-kart {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.karta {
+  background: #e2e8f0;
+  border: 2px solid #cbd5e0;
+  border-radius: 8px;
+  padding: 18px 14px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: transform 0.15s ease;
+}
+
+/* ----- Lista ----- */
+.lista-uczestnikow {
+  list-style: none;
+  counter-reset: item;
+}
+
+.lista-uczestnikow li {
+  background: #edf2f7;
+  padding: 10px 14px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  border-left: 4px solid #a0aec0;
+  font-size: 0.95rem;
+}
+
+/* ----- Tabela ----- */
+.tabela-wynikow {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.tabela-wynikow th,
+.tabela-wynikow td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.tabela-wynikow thead th {
+  background: #2d3748;
+  color: white;
+  font-weight: 600;
+}
+
+.tabela-wynikow tbody tr {
+  background: #fff;
+}
+
+/* ----- Tagi ----- */
+.kontener-tagow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  display: inline-block;
+  background: #e2e8f0;
+  color: #2d3748;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* ----- Stopka ----- */
+footer {
+  text-align: center;
+  color: #718096;
+  font-size: 0.85rem;
+  padding: 16px;
+}
+
+
+/* ============================================
+   TWOJE STYLE – TUTAJ DOPISUJ REGUŁY
+   z użyciem :nth-child()
+   ============================================ */
+
+/* --- Zadanie 1: Karty projektów --- */
+
+/* co druga karta (parzyste) – tło jasnoniebieskie */
+#karty .karta:nth-child(even){
+    color: red;
+}
+
+
+/* co trzecia karta – pogrubiona ramka */
+#karty .karta:nth-child(3n){
+    border: 2px solid black;
+}
+
+/* pierwsza karta – inne tło */
+#karty .karta:first-child{
+    background-color: forestgreen;
+}
+
+/* ostatnia karta – inne tło */
+#karty .karta:last-child{
+    background-color: purple;
+}
+
+
+/* --- Zadanie 2: Lista uczestników --- */
+
+/* nieparzyste elementy – delikatne tło */
+#lista :nth-child(odd){
+    background-color: aquamarine;
+}
+
+
+/* co czwarty element – wyróżniona lewa ramka */
+#lista :nth-child(4n){
+    border-left: 2px red;
+}
+
+
+
+/* --- Zadanie 3: Tabela wyników --- */
+
+/* parzyste wiersze tbody – szare tło (zebra) */
+#tabela .tabela-wynikow tbody tr:nth-child(even) {
+    background-color: gray;
+}
+
+/* co trzeci wiersz – delikatne zielone tło */
+#tabela .tabela-wynikow tbody tr:nth-child(3n) {
+    background-color: rgb(76, 158, 76);
+}
+
+
+/* --- Zadanie 4: Tagi --- */
+
+/* pierwszy tag – kolor wyróżniający */
+#tagi .tag.tag:first-child(2n){
+    background-color: rgb(2, 204, 255);
+}
+
+/* co drugi tag – inny kolor tła */
+#tagi .tag.tag:nth-child(2n){
+    background-color: yellow;
+}
+
+/* co trzeci tag – inny kolor tła */
+#tagi .tag.tag:nth-child(3n){
+    background-color: rgb(162, 29, 167);
+}

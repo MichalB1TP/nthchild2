@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ćwiczenie: :nth-child()</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Galeria projektów uczniowskich</h1>
+    <p>Strona do ćwiczenia selektora <code>:nth-child()</code></p>
+  </header>
+
+  <main>
+
+    <!-- ZADANIE 1: lista produktów / kart -->
+    <section class="sekcja" id="karty">
+      <h2>1. Karty projektów</h2>
+      <p class="opis">Użyj <code>:nth-child()</code>, aby pokolorować karty według reguł z zadania.</p>
+      <div class="siatka-kart">
+        <article class="karta">Projekt 1 – Strona szkoły</article>
+        <article class="karta">Projekt 2 – Kalkulator</article>
+        <article class="karta">Projekt 3 – Quiz wiedzy</article>
+        <article class="karta">Projekt 4 – Todo lista</article>
+        <article class="karta">Projekt 5 – Galeria zdjęć</article>
+        <article class="karta">Projekt 6 – Zegar</article>
+        <article class="karta">Projekt 7 – Formularz kontaktowy</article>
+        <article class="karta">Projekt 8 – Animacja CSS</article>
+        <article class="karta">Projekt 9 – Gra memory</article>
+      </div>
+    </section>
+
+    <!-- ZADANIE 2: lista numerowana / menu -->
+    <section class="sekcja" id="lista">
+      <h2>2. Lista uczestników</h2>
+      <p class="opis">Wyróżnij elementy listy za pomocą <code>:nth-child()</code>.</p>
+      <ol class="lista-uczestnikow">
+        <li>Anna Kowalska</li>
+        <li>Jan Nowak</li>
+        <li>Maria Wiśniewska</li>
+        <li>Piotr Zieliński</li>
+        <li>Katarzyna Wójcik</li>
+        <li>Tomasz Kamiński</li>
+        <li>Agnieszka Lewandowska</li>
+        <li>Michał Szymański</li>
+        <li>Joanna Dąbrowska</li>
+        <li>Paweł Kozłowski</li>
+      </ol>
+    </section>
+
+    <!-- ZADANIE 3: tabela -->
+    <section class="sekcja" id="tabela">
+      <h2>3. Tabela wyników</h2>
+      <p class="opis">Pokoloruj wiersze tabeli regułami <code>:nth-child()</code>.</p>
+      <table class="tabela-wynikow">
+        <thead>
+          <tr>
+            <th>Lp.</th>
+            <th>Imię i nazwisko</th>
+            <th>Punkty</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Anna Kowalska</td><td>95</td></tr>
+          <tr><td>2</td><td>Jan Nowak</td><td>88</td></tr>
+          <tr><td>3</td><td>Maria Wiśniewska</td><td>91</td></tr>
+          <tr><td>4</td><td>Piotr Zieliński</td><td>76</td></tr>
+          <tr><td>5</td><td>Katarzyna Wójcik</td><td>84</td></tr>
+          <tr><td>6</td><td>Tomasz Kamiński</td><td>79</td></tr>
+          <tr><td>7</td><td>Agnieszka Lewandowska</td><td>92</td></tr>
+          <tr><td>8</td><td>Michał Szymański</td><td>67</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ZADANIE 4: paski / tagi -->
+    <section class="sekcja" id="tagi">
+      <h2>4. Tagi tematyczne</h2>
+      <p class="opis">Nadaj różne kolory tagom według pozycji.</p>
+      <div class="kontener-tagow">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Responsive</span>
+        <span class="tag">Flexbox</span>
+        <span class="tag">Grid</span>
+        <span class="tag">Animacje</span>
+        <span class="tag">Formularze</span>
+        <span class="tag">SEO</span>
+        <span class="tag">Dostępność</span>
+        <span class="tag">Git</span>
+        <span class="tag">Deploy</span>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Ćwiczenie CSS – selektor :nth-child()</p>
+  </footer>
+
+</body>
+</html>
